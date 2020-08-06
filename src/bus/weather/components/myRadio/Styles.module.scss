@@ -1,0 +1,48 @@
+.radio {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  padding-right: 40px;
+  margin-bottom: 25px;
+
+  &__input {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__box {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: solid 1px #fff;
+    border-radius: 3px;
+    right: 0px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  // Checked
+  &__input:checked + span::after {
+    content: "✓";
+  }
+
+  // Disabled
+  &__input:disabled + span::after,
+  &__input:disabled + span {
+    border-color: darken(#fff, 60%);
+    color: darken(#fff, 60%);
+    cursor: not-allowed;
+  }
+}

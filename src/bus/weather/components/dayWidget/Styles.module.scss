@@ -1,0 +1,114 @@
+// palette
+@import "../../../../styles/palette.scss";
+
+.head {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 83px;
+
+  .cloudy {
+    width: 114px;
+    background-image: url("../../../../assets/weather-icon-cloudy.png");
+  }
+
+  .rainy {
+    width: 100px;
+    background-image: url("../../../../assets/weather-icon-rainy.png");
+  }
+
+  .sunny {
+    width: 88px;
+    background-image: url("../../../../assets/weather-icon-sunny.png");
+  }
+
+  .icon {
+    margin-right: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 88px;
+  }
+
+  .current-date {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .current-date p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: $color1;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .current-date span {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    color: $color1;
+    text-transform: uppercase;
+  }
+}
+
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 38px;
+
+  .temperature {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 350px;
+    line-height: 1;
+    color: $color1;
+    margin-bottom: 100px;
+  }
+
+  .temperature::after {
+    position: absolute;
+    top: 53px;
+    right: -70px;
+    content: "";
+    display: inline-block;
+    width: 37px;
+    height: 41px;
+    border: solid 5px $color1;
+    border-radius: 50%;
+  }
+
+  .meta span {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 19px;
+    color: $color1;
+    display: inline-flex;
+    align-items: flex-start;
+  }
+
+  .meta span:first-child {
+    margin-right: 81px;
+  }
+
+  .meta .rainy::before {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url("../../../../assets/rainy.png");
+    margin-right: 11px;
+  }
+
+  .meta .humidity::before {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    height: 28px;
+    background-image: url("../../../../assets/humidity.png");
+    margin-right: 11px;
+  }
+}
